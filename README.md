@@ -128,3 +128,15 @@ The implementation of TLS and controller are out of scope for this document, ple
 
 ### Updating Hugo site
 
+Running faas-cli up command after any update will update your image.
+
+1. Updating image
+                $ kubectl -n openfaas set image deployment.v1.apps/myblog myblog=pgr095.azurecr.io/hugoblog --record
+
+2. Checking update
+
+                $ kubectl rollout status deployment.v1.apps/myblog -n openfaas
+
+3. Checking logs from service
+
+                $ kubectl logs <ingress-nginx-controller-name> -n ingress-nginx -f
