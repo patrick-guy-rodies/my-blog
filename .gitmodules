@@ -1,3 +1,6 @@
 [submodule "example-site/themes/ananke"]
 	path = example-site/themes/ananke
 	url = https://github.com/budparr/gohugo-theme-ananke.git
+[submodule "octant"]
+	path = octant
+	url = https://github.com/vmware-tanzu/octant.git
