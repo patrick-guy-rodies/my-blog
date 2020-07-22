@@ -1,0 +1,10 @@
+version: 1.0
+provider:
+  name: openfaas
+  gateway: https://openfaas.pgr095.tk
+functions:
+  test-site:
+    lang: hugo
+    handler: ./test-site
+    image: test-site:latest
+

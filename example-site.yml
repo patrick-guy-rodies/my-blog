@@ -1,0 +1,9 @@
+version: 1.0
+provider:
+  name: openfaas
+  gateway: https://openfaas.pgr095.tk #To be changed to your gateway
+functions:
+  hugo-blog:
+    lang: hugo
+    handler: ./example-site
+    image: pgr095.azurecr.io/hugoblog:latest #To be change to your repo

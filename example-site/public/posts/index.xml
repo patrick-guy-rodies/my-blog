@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on My New Hugo Site</title>
+    <link>./posts/</link>
+    <description>Recent content in Posts on My New Hugo Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 21 Jul 2020 20:12:06 +0200</lastBuildDate>
+    
+	<atom:link href="./posts/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Create Static Page</title>
+      <link>./posts/create-static-page/</link>
+      <pubDate>Tue, 21 Jul 2020 20:12:06 +0200</pubDate>
+      
+      <guid>./posts/create-static-page/</guid>
+      <description>{{ define &amp;ldquo;main&amp;rdquo; }} {{ .Title }}  {{ .Content }}      {{ .Date.Format &amp;ldquo;Mon Jan 2, 2006&amp;rdquo; }}  {{ .WordCount }} Words   {{ with .Params.topics }} {{ range . }} {{ . }}  {{ end }}  {{ end }} {{ with .Params.tags }} {{ range . }}  {{ . }}  {{ end }}  {{ end }}   {{ with .</description>
+    </item>
+    
+    <item>
+      <title>Patrick Rodies</title>
+      <link>./posts/patrick-rodies/</link>
+      <pubDate>Tue, 21 Jul 2020 19:52:33 +0200</pubDate>
+      
+      <guid>./posts/patrick-rodies/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

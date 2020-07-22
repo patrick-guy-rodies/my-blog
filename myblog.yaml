@@ -1,0 +1,32 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: myblog
+  namespace: openfaas
+spec:
+  ports:
+  - port: 80
+    targetPort: 8080
+  selector:
+    app: myblog
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: myblog
+  namespace: openfaas
+spec:
+  selector:
+    matchLabels:
+      app: myblog
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: myblog
+    spec:
+      containers:
+      - name: myblog
+        image: pgr095.azurecr.io/hugoblog:latest
+        ports:
+        - containerPort: 8080

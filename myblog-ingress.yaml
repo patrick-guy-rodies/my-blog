@@ -1,0 +1,15 @@
+apiVersion: openfaas.com/v1alpha2
+kind: FunctionIngress
+metadata:
+  name: example-site-tls
+  namespace: openfaas
+spec:
+  domain: "myblog.pgr095.tk"
+  function: "hugo-blog"
+  ingressType: "nginx"
+  path: "/"
+  tls:
+    enabled: true
+    issuerRef:
+      name: "letsencrypt-prod"
+      kind: "ClusterIssuer"
